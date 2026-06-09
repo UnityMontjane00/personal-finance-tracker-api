@@ -1,4 +1,4 @@
-package com.unity.financetracker;
+package com.unity.financetracker.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.time.LocalDate;

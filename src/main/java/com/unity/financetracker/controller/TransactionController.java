@@ -1,6 +1,6 @@
 package com.unity.financetracker.controller;
 
-import com.unity.financetracker.Transaction;
+import com.unity.financetracker.entity.Transaction;
 import com.unity.financetracker.service.TransactionService;
 import org.springframework.web.bind.annotation.*;
 

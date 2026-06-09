@@ -1,6 +1,6 @@
 package com.unity.financetracker.service;
 
-import com.unity.financetracker.Transaction;
+import com.unity.financetracker.entity.Transaction;
 import com.unity.financetracker.repository.TransactionRepository;
 import org.springframework.stereotype.Service;
 
