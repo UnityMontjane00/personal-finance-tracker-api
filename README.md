@@ -135,6 +135,8 @@ CREATE DATABASE finance_db;
 ## Author
 
 Unity Montjane
+
+
 Software developer and data Analyst
 
-Aspiring Software Developer and Data Analyst
+
