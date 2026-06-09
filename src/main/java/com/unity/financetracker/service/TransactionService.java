@@ -1,6 +1,7 @@
 package com.unity.financetracker.service;
 
 import com.unity.financetracker.entity.Transaction;
+import com.unity.financetracker.exception.TransactionNotFoundException;
 import com.unity.financetracker.repository.TransactionRepository;
 import org.springframework.stereotype.Service;
 
@@ -44,12 +45,14 @@ public class TransactionService {
     }
     public Transaction getTransactionById(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Transaction not found"));
+                .orElseThrow(() ->
+                        new TransactionNotFoundException("Transaction not found"));
     }
     public Transaction updateTransaction(Long id, Transaction updatedTransaction) {
 
         Transaction existingTransaction = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Transaction not found"));
+                .orElseThrow(() ->
+                        new TransactionNotFoundException("Transaction not found"));
 
         existingTransaction.setDescription(updatedTransaction.getDescription());
         existingTransaction.setAmount(updatedTransaction.getAmount());
@@ -62,7 +65,8 @@ public class TransactionService {
     public void deleteTransaction(Long id) {
 
         Transaction transaction = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Transaction not found"));
+                .orElseThrow(() ->
+                        new TransactionNotFoundException("Transaction not found"));
 
         repository.delete(transaction);
     }public List<Transaction> getTransactionsByCategory(String category) {
