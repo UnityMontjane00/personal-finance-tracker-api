@@ -80,9 +80,5 @@ src/main/resources
 * Charts and visualizations
 * User authentication
 
-## Author
 
-Unity Montjane
-
-Software Developer | Java | Spring Boot | PostgreSQL
 
